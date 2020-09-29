@@ -23,7 +23,7 @@ class AddPiece extends Component {
         displayName: 'Robin Love',
         email: 'robin@email.com'
       },
-      stars: 0,
+      likes: 0,
       comments: 0,
       createdAt: new Date(),
     }
