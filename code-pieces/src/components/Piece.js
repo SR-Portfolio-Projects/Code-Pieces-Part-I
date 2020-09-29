@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import moment from 'moment';
 import LikePiece from './LikePiece';
 
@@ -12,18 +11,18 @@ const Piece = ({ piece, likePiece }) => {
         <div className="piece-header">
           <div>
             <h3>{piece.title}</h3>
-           <LikePiece
-           	likePiece={() => likePiece(piece.id,{liked, isLiked})}
-             numberOfLikes={piece.likes}
-             liked={liked}
-           />
+              <LikePiece
+                likePiece= {() => likePiece(piece.id, { liked, isLiked })}
+                numberOfLikes = { piece.likes }
+                liked = { liked }
+              />
           </div>
         <div>
-        <p>Piece by {piece.user.displayName}</p>
-        <p>{moment(piece.createdAt).calendar()}</p>
+        <p>Piece by { piece.user.displayName }</p>
+        <p>{ moment(piece.createdAt).calendar() }</p>
         </div>
         </div>
-        <div className="content">{piece.content}</div>
+        <div className="content">{  piece.content }</div>
       </div>
     </div>
   );
