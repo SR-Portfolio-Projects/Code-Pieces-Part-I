@@ -42,7 +42,10 @@ const App = () => {
     return (
       <div className="App">
           <h1>Code Pieces</h1>
-          <Pieces pieces = { pieces } onCreate = { handleCreate } likePiece = { likePiece } />
+		  <Pieces pieces = { pieces } 
+		  		  setPieces = { setPieces }
+				  addPiece = { handleCreate }
+				  likePiece = { likePiece } />
       </div>
     );
   }

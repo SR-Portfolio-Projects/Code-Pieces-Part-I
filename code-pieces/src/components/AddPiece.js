@@ -1,25 +1,21 @@
-import React, { Component } from 'react';
+import React, { useState } from "react";
 
-class AddPiece extends Component {
-  state = { title: '', content: '' };
 
-  handleChange = event => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-  };
+const AddPiece = ({addPiece}) => {
+  const [title, setTitle] = useState();
+	const [content, setContent] = useState();
 
-  handleSubmit = event => {
-    event.preventDefault();
-
-    const { onCreate } = this.props;
-    const { title, content } = this.state;
-
-    const piece = {
+  const handleSubmit = e => {
+    e.preventDefault();
+    const newPiece = {
       id: Date.now().toString(),
-      title,
-      content,
+      title: title,
+      content: content,
+      imageUrl:"https://images.unsplash.com/photo-1477763858572-cda7deaa9bc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1876&q=80",
+
       user: {
         userId: '1',
+        userImage: "https://icon2.cleanpng.com/20180320/sqe/kisspng-twitch-computer-icons-streaming-media-youtube-live-tv-twitch-icon-5ab19172461392.001176751521586546287.jpg",
         displayName: 'Robin Love',
         email: 'robin@email.com'
       },
@@ -28,37 +24,60 @@ class AddPiece extends Component {
       createdAt: new Date(),
     }
 
-    onCreate(piece);
+    addPiece(newPiece);
 
-    this.setState({ title: '', content: '' });
+    setTitle('');
+    setContent('');
   };
 
-  render() {
-    const { title, content } = this.state;
+
+  const handleChange = e => {
+    e.preventDefault();
+
+		const inputValue = e.target.value;
+
+		switch (e.target.name) {
+			case "title":
+				setTitle(inputValue);
+				break;
+			case "content":
+				setContent(inputValue);
+				break;
+			default:
+				break;
+		}
+  };
+
+  
+
+
     return (
       <div className = 'form'>
         <h2>Add Your Code Piece</h2>
-      <form onSubmit={this.handleSubmit} className="AddPiece">
-        <input className = 'title'
-          type="text"
-          name="title"
-          placeholder="Title"
-          value={title}
-          onChange={this.handleChange}
-        />
-        <textarea
-          rows='10'
-          type="text"
-          name="content"
-          placeholder="Body"
-          value={content}
-          onChange={this.handleChange}
-        ></textarea>
-        <input className="create" type="submit" value="Create Piece" />
-      </form>
+        <form onSubmit={handleSubmit} className="AddPiece">
+
+          <input className = 'title'
+                type="text"
+                name="title"
+                placeholder="Title"
+                value={title}
+                onChange={handleChange}
+          />
+          <textarea className = ''
+                    rows='10'
+                    type="text"
+                    name="content"
+                    placeholder="Body"
+                    value={content}
+                    onChange={handleChange}>
+          </textarea>
+          <input className="create" 
+                type="submit" 
+                value="Create Piece" />
+        </form>
       </div>
     );
   }
-}
 
 export default AddPiece;
+

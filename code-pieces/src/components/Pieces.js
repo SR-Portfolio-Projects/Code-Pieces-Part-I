@@ -3,13 +3,20 @@ import Piece from './Piece';
 import AddPiece from './AddPiece';
 
 
-const Pieces = ({ pieces, onCreate, likePiece }) => {
+const Pieces = ({ pieces, addPiece, likePiece, setPieces }) => {
 
   return (
-    <section className="Pieces">
-      {pieces.map((piece, index) => <Piece  key={piece.id} piece= {piece}  likePiece = { likePiece } liked = {false} />)}
-      <AddPiece onCreate={onCreate} />
-    </section>
+    <div className="Pieces">
+      {pieces.map((piece, index) => {
+      return <Piece  key= { piece.id } 
+                     piece = { piece }  
+                     likePiece = { likePiece } 
+                     liked = { false } />
+      })}
+      
+    
+      <AddPiece addPiece = { addPiece} />
+    </div>
   )
 }
 
