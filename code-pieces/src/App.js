@@ -15,10 +15,34 @@ const App = () => {
     setPieces([...pieces, piece])
   };
 
+  const likePiece = (pieceId, isLikedState) => {
+		const { liked, isLiked } = isLikedState;
+
+		const likedConditioning = (likedBool) => {
+			setPieces(
+				pieces.map((piece) => {
+					const changedValue =
+						likedBool !== true ? piece.likes + 1 : piece.likes - 1;
+					if (piece.id === pieceId) {
+						return { ...piece, likes: changedValue };
+					}
+					return piece;
+				})
+			);
+		};
+
+		if (liked === false) {
+			likedConditioning(liked);
+		} else if (liked === true) {
+			likedConditioning(liked);
+		}
+		isLiked(!liked);
+	};
+
     return (
       <div className="App">
           <h1>Code Pieces</h1>
-          <Pieces pieces={pieces} onCreate={handleCreate} />
+          <Pieces pieces = { pieces } onCreate = { handleCreate } likePiece = { likePiece } />
       </div>
     );
   }

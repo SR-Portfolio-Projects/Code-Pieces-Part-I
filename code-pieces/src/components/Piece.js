@@ -1,9 +1,10 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faThumbsUp, faComments } from '@fortawesome/free-solid-svg-icons'
-import moment from 'moment';
+import React, { useState } from 'react';
 
-const Piece = ({ piece }) => {
+import moment from 'moment';
+import LikePiece from './LikePiece';
+
+const Piece = ({ piece, likePiece }) => {
+  const [liked, isLiked] = useState(false);
 
   return (
     <div className="piece">
@@ -11,17 +12,11 @@ const Piece = ({ piece }) => {
         <div className="piece-header">
           <div>
             <h3>{piece.title}</h3>
-            <div className="icons">
-                  <span role="img" aria-label="star">
-                  <FontAwesomeIcon icon={faThumbsUp} />
-                  </span>
-                  {piece.likes}
-            
-                  <span role="img" aria-label="comments">
-                  <FontAwesomeIcon icon={faComments} />
-                  </span>
-                  {piece.comments}
-            </div>
+           <LikePiece
+           	likePiece={() => likePiece(piece.id,{liked, isLiked})}
+             numberOfLikes={piece.likes}
+             liked={liked}
+           />
           </div>
         <div>
         <p>Piece by {piece.user.displayName}</p>
@@ -29,10 +24,6 @@ const Piece = ({ piece }) => {
         </div>
         </div>
         <div className="content">{piece.content}</div>
-      </div>
-      <div className="piece-buttons">
-          <button className="star">Like</button>
-          <button className="delete">Delete</button>
       </div>
     </div>
   );
