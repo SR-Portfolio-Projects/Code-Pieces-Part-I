@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Piece from './Piece';
-import AddPiece from './AddPiece';
+import Piece from './codePieces/Piece';
+import AddPiece from './codePieces/AddPiece';
 
 
 const Pieces = ({ pieces, addPiece, likePiece, setPieces }) => {

@@ -20,7 +20,29 @@ const AddPiece = ({addPiece}) => {
         email: 'robin@email.com'
       },
       likes: 0,
-      comments: 0,
+      numOfComments: 0,
+      commentsList: [
+        {
+          id: 36,
+          username: "twitch",
+          text: "Epic Street Fighter action here in Vegas!",
+        },
+        {
+          id: 37,
+          username: "michaelmarzetta",
+          text: "Omg that match was crazy",
+        },
+        {
+          id: 38,
+          username: "themexican_leprechaun",
+          text: "What a setup",
+        },
+        {
+          id: 39,
+          username: "dennis_futbol",
+          text: "It that injustice",
+        },
+      ],
       createdAt: new Date(),
     }
 

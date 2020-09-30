@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 import LikePiece from './LikePiece';
-import Comments from './Comments';
+import Comments from '../Comments';
 
 const Piece = ({ piece, likePiece }) => {
   const [liked, isLiked] = useState(false);
