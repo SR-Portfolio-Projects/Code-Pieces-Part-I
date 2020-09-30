@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 import LikePiece from './LikePiece';
+import Comments from './Comments';
 
 const Piece = ({ piece, likePiece }) => {
   const [liked, isLiked] = useState(false);
@@ -24,6 +25,7 @@ const Piece = ({ piece, likePiece }) => {
         </div>
         <div className="content">{  piece.content }</div>
       </div>
+            <Comments numOfComments = { piece.numOfComments } commentsList = {piece.commentsList} />
     </div>
   );
 };

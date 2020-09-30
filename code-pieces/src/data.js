@@ -11,7 +11,7 @@ const dummyPieces = [
           email: 'shannon@email.com'
         },
         likes: 34,
-        comments: 2000,
+        numOfComments: 2000,
 		commentsList: [
 			{
 				id: 22,
@@ -42,7 +42,7 @@ const dummyPieces = [
           email: 'keon@email.com'
         },
         likes: 87,
-        comments: 5000,
+        numOfComments: 5000,
 		commentsList: [
 			{
 				id: 36,
