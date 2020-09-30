@@ -6,6 +6,8 @@
 - [part1-refactoring](https://github.com/SR-Portfolio-Projects/Code-Pieces-Part-I/tree/part1-refactoring) 
     - refactored to use hooks to manage state
     - added ability to like pieces
+- [delete-piece]()
+    -ability to delete a piece
 
 ### The Code Pieces
 - [x] User has the ability to add a code piece
@@ -13,3 +15,5 @@
     - user is ony able to like it once
     - if the like button is clicked a second time it removes the like
     - when user as liked a piece the liked icons is a different color
+- [ ] User has the ability to delete a piece
+- [ ] User has the ability to update a piece

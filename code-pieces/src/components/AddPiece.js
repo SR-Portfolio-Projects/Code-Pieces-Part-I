@@ -71,9 +71,9 @@ const AddPiece = ({addPiece}) => {
                     value={content}
                     onChange={handleChange}>
           </textarea>
-          <input className="create" 
+          <button className="create" 
                 type="submit" 
-                value="Create Piece" />
+                >Create Piece</button>
         </form>
       </div>
     );
