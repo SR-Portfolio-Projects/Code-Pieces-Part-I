@@ -29,7 +29,10 @@ const Comments = (props) => {
 
 				{ commentsList.length && (
 
-					<div className = {`comments ${commentsOpen ? 'show' : ''}`}>
+					<div className = {`comments ${commentsOpen ? 'show' : 'hide'}`}>
+						<div className = 'close-comments-button' onClick = { handleClick }>
+							<FontAwesomeIcon icon = { faTimes } />
+                  		</div>
 
 						{commentsList.map((comment, index) => (
 
@@ -38,10 +41,9 @@ const Comments = (props) => {
                             </div>
 
                         ))}
+						<input></input>
 
-						<div className = 'close-comments-button' onClick = { handleClick }>
-							<FontAwesomeIcon icon = { faTimes } />
-                  		</div>
+						
 
 					</div>
 				)}
