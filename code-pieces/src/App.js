@@ -9,6 +9,7 @@ import Pieces from './components/Pieces';
 
 import './App.css';
 import AddPiece from './components/codePieces/AddPiece';
+import EditPiece from './components/codePieces/EditPiece';
 
 
 const App = () => {
@@ -47,6 +48,10 @@ const App = () => {
 		isLiked(!liked);
 	};
 
+  const editPiece = (pieceId) => {
+	  
+  }
+
     return (
       <div className="App">
           <h1>Code Pieces</h1>
@@ -55,6 +60,11 @@ const App = () => {
       	  </Link>
 		  
 		  <Switch>
+		  	<Route path = '/editpiece/:id' render = {() => {
+        		return (
+          			<EditPiece />
+        		)
+      		}}/>
 
 			<Route path = '/addpiece' render = {() => {
         		return (
