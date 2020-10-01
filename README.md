@@ -6,6 +6,8 @@
 - [part1-refactoring](https://github.com/SR-Portfolio-Projects/Code-Pieces-Part-I/tree/part1-refactoring) 
     - refactored to use hooks to manage state
     - added ability to like pieces
+- [UI]()
+    - React Router
 - [delete-piece]()
     -ability to delete a piece
 
@@ -26,3 +28,13 @@
 
 **Come Back Too**
 - [ ] Closing the comment after they are opened [This](https://github.com/SR-Portfolio-Projects/React-Hamburger-Menu)
+
+
+
+### Concepts
+- React
+- React Router
+- React Router DOM
+- Hooks
+
+**Application allows you to create, read, update and delete post, which I call code pieces, and comments. to the page. The user can read create update and delete post
