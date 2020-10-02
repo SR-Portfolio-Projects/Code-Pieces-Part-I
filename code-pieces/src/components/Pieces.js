@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Piece from './codePieces/Piece';
-import AddPiece from './codePieces/AddPiece';
+
 
 
 const Pieces = ({ pieces, likePiece }) => {

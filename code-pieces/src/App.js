@@ -9,6 +9,7 @@ import Pieces from './components/Pieces';
 
 import './App.css';
 import AddPiece from './components/codePieces/AddPiece';
+import EditPiece from './components/codePieces/EditPiece';
 
 
 const App = () => {
@@ -50,6 +51,9 @@ const App = () => {
 	const deletePiece = () => {
 		
 	}
+  const editPiece = (pieceId) => {
+	  
+  }
 
     return (
       <div className="App">
@@ -59,6 +63,11 @@ const App = () => {
       	  </Link>
 		  
 		  <Switch>
+		  	<Route path = '/editpiece/:id' render = {() => {
+        		return (
+          			<EditPiece />
+        		)
+      		}}/>
 
 			<Route path = '/addpiece' render = {() => {
         		return (
