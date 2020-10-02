@@ -39,6 +39,10 @@ const App = () => {
 		isLiked(!liked);
 	};
 
+	const deletePiece = () => {
+		
+	}
+
     return (
       <div className="App">
           <h1>Code Pieces</h1>
