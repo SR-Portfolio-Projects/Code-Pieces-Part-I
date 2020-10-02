@@ -7,12 +7,12 @@ const EditPiece = (props) => {
 
 	return (
 		<div className="edit-section" key="edit-icon-container">
-			{/* <div onClick = { updatePiece(id) } className="edit-section-wrapper">
+			<div className="edit-section-wrapper">
 				<p className="like-number">Edit</p>
 					<FontAwesomeIcon color = { liked === true ? "red" : "black"}
 									 icon={faEdit}
 					/>
-			</div> */}
+			</div>
 		</div>
 	);
 };

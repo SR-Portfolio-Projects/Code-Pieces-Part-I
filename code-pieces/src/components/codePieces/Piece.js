@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import moment from 'moment';
 import LikePiece from './LikePiece';
 import Comments from '../Comments';
+import DeletePiece from './DeletePiece';
+import EditPiece from './EditPiece';
 
 const Piece = ({ piece, likePiece }) => {
   const [liked, isLiked] = useState(false);
@@ -23,7 +25,7 @@ const Piece = ({ piece, likePiece }) => {
         <p>{ moment(piece.createdAt).calendar() }</p>
         </div>
         </div>
-        <div className="content">{  piece.content }</div>
+        <div className="content"><DeletePiece />  <EditPiece />{  piece.content }</div>
       </div>
             <Comments numOfComments = { piece.numOfComments } commentsList = {piece.commentsList} />
     </div>
