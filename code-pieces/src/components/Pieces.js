@@ -4,7 +4,7 @@ import Piece from './codePieces/Piece';
 
 
 
-const Pieces = ({ pieces, likePiece, deletePiece }) => {
+const Pieces = ({ pieces, likePiece, deletePiece, editPiece }) => {
 
   return (
     <div className="Pieces">

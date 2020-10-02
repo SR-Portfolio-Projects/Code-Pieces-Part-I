@@ -3,7 +3,7 @@ import moment from 'moment';
 import LikePiece from './LikePiece';
 import Comments from '../Comments';
 import DeletePiece from './DeletePiece';
-import EditPiece from './EditPiece';
+import EditPieceLink from './EditPieceLink';
 
 const Piece = ({ piece, likePiece, deletePiece }) => {
   const [liked, isLiked] = useState(false);
@@ -27,7 +27,7 @@ const Piece = ({ piece, likePiece, deletePiece }) => {
         </div>
         <div className="content">
           <DeletePiece deletePiece = {() => deletePiece(piece.id) } />  
-          <EditPiece />
+          <EditPieceLink/>
           <p>{  piece.content }</p>
         </div>
       </div>
