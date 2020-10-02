@@ -6,7 +6,7 @@ const DeletePiece = ({deletePiece}) => {
 
     return (
       <div className = 'delete'>
-          <FontAwesomeIcon
+          <FontAwesomeIcon onClick = {deletePiece}
 				// color={liked===true?"red":"black"}
 				icon={faTrashAlt}
 	      />

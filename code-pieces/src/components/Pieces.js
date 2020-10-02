@@ -4,7 +4,7 @@ import Piece from './codePieces/Piece';
 
 
 
-const Pieces = ({ pieces, likePiece }) => {
+const Pieces = ({ pieces, likePiece, deletePiece }) => {
 
   return (
     <div className="Pieces">
@@ -12,7 +12,8 @@ const Pieces = ({ pieces, likePiece }) => {
       {pieces.map((piece, index) => {
 
         return <Piece  key= { piece.id } 
-                      piece = { piece }  
+                      piece = { piece } 
+                      deletePiece = { deletePiece } 
                       likePiece = { likePiece } 
                       liked = { false } />
       })}      

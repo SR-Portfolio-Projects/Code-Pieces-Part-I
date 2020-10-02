@@ -48,12 +48,18 @@ const App = () => {
 		isLiked(!liked);
 	};
 
-	const deletePiece = () => {
-		
+	const deletePiece = (clickedPiece) => {
+		alert('Are you sure?')
+		setPieces(
+			pieces.filter(piece => piece.id !== clickedPiece)
+		)
 	}
-  const editPiece = (pieceId) => {
+
+  	const editPiece = (pieceId) => {
+
+		
 	  
-  }
+  	}
 
     return (
       <div className="App">
@@ -79,7 +85,8 @@ const App = () => {
 				return (
 					<Pieces pieces = { pieces } 
 						    setPieces = { setPieces }
-				            likePiece = { likePiece } 
+							likePiece = { likePiece } 
+							deletePiece = { deletePiece }
 					/>
 
 				)
