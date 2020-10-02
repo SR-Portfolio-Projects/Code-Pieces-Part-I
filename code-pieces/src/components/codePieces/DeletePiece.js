@@ -6,10 +6,10 @@ const DeletePiece = ({deletePiece}) => {
 
     return (
       <div className = 'delete'>
+        
           <FontAwesomeIcon onClick = {deletePiece}
-				// color={liked===true?"red":"black"}
-				icon={faTrashAlt}
-	      />
+				                   icon={faTrashAlt}
+	        />
        
       </div>
     );

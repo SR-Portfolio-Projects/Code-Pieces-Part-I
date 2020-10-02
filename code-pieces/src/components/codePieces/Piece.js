@@ -25,7 +25,11 @@ const Piece = ({ piece, likePiece, deletePiece }) => {
         <p>{ moment(piece.createdAt).calendar() }</p>
         </div>
         </div>
-        <div className="content"><DeletePiece deletePiece = {() => deletePiece(piece.id) } />  <EditPiece />{  piece.content }</div>
+        <div className="content">
+          <DeletePiece deletePiece = {() => deletePiece(piece.id) } />  
+          <EditPiece />
+          <p>{  piece.content }</p>
+        </div>
       </div>
             <Comments numOfComments = { piece.numOfComments } commentsList = {piece.commentsList} />
     </div>
