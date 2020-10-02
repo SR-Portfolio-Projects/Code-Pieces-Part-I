@@ -10,35 +10,15 @@ h1 {
   font-size: 5rem;
 }
 
-.form h2{
-  font-size: 3rem;
-  margin: 5rem 0 1rem 0;
-}
-
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin: 5rem 0 10rem 0;
-}
-
-.title {
-  border-top: none;
-  border-right: none;
-  border-left: none;
-}
-
-textarea {
-  margin: 10rem 0;
-}
 
 .piece {
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  margin: 0 auto;
+  margin: 5rem auto;
+  width: 40%;
   font-size: 1.5rem;
-  margin: 5rem 0;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  
 }
 
 .piece-header {
@@ -89,3 +69,45 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   display: flex;
   justify-content: space-between;
 }
+
+
+/*Comments*/
+
+.comments-button {
+  cursor: pointer;
+}
+
+.comments{
+  display: none;
+}
+
+.show {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
+
+.form h2{
+  font-size: 3rem;
+  margin: 5rem 0 1rem 0;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0 10rem 0;
+}
+
+.title {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+textarea {
+  margin: 10rem 0;
+}
+

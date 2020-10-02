@@ -1,4 +1,6 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
+import { Route, Switch } from 'react-router';
+import { useHistory, Link } from 'react-router-dom';
 
 import dummyPieces from './data'
 
@@ -6,13 +8,19 @@ import Pieces from './components/Pieces';
 
 
 import './App.css';
+import AddPiece from './components/codePieces/AddPiece';
 
 
 const App = () => {
   const [ pieces, setPieces] = useState(dummyPieces)
 
+  const history = useHistory()
+
   const handleCreate = piece => {
-    setPieces([...pieces, piece])
+	setPieces([...pieces, piece])
+	setTimeout(() => {
+		history.push('/');
+	  }, 100);
   };
 
   const likePiece = (pieceId, isLikedState) => {
@@ -46,10 +54,29 @@ const App = () => {
     return (
       <div className="App">
           <h1>Code Pieces</h1>
-		  <Pieces pieces = { pieces } 
-		  		  setPieces = { setPieces }
-				  addPiece = { handleCreate }
-				  likePiece = { likePiece } />
+		  <Link to = '/addpiece'>
+        	Add Piece
+      	  </Link>
+		  
+		  <Switch>
+
+			<Route path = '/addpiece' render = {() => {
+        		return (
+          			<AddPiece  addPiece = { handleCreate }/>
+        		)
+      		}}/>
+
+			<Route path = '/' render = { () => {
+				return (
+					<Pieces pieces = { pieces } 
+						    setPieces = { setPieces }
+				            likePiece = { likePiece } 
+					/>
+
+				)
+			}} />
+
+		</Switch>
       </div>
     );
   }
