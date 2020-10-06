@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
 import Piece from './codePieces/Piece';
-import AddPiece from './codePieces/AddPiece';
 
 
-const Pieces = ({ pieces, likePiece }) => {
+
+const Pieces = ({ pieces, likePiece, deletePiece, editPiece }) => {
 
   return (
     <div className="Pieces">
@@ -12,7 +12,8 @@ const Pieces = ({ pieces, likePiece }) => {
       {pieces.map((piece, index) => {
 
         return <Piece  key= { piece.id } 
-                      piece = { piece }  
+                      piece = { piece } 
+                      deletePiece = { deletePiece } 
                       likePiece = { likePiece } 
                       liked = { false } />
       })}      

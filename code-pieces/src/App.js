@@ -9,10 +9,12 @@ import Pieces from './components/Pieces';
 
 import './App.css';
 import AddPiece from './components/codePieces/AddPiece';
+import EditPieceForm from './components/codePieces/EditPieceForm';
 
 
 const App = () => {
   const [ pieces, setPieces] = useState(dummyPieces)
+  
 
   const history = useHistory()
 
@@ -22,6 +24,12 @@ const App = () => {
 		history.push('/');
 	  }, 100);
   };
+
+  const handleEdit = pieceId => {
+	  alert("On the way")
+  }
+
+  
 
   const likePiece = (pieceId, isLikedState) => {
 		const { liked, isLiked } = isLikedState;
@@ -47,6 +55,15 @@ const App = () => {
 		isLiked(!liked);
 	};
 
+	const deletePiece = (clickedPiece) => {
+		alert('Are you sure?')
+		setPieces(
+			pieces.filter(piece => piece.id !== clickedPiece)
+		)
+	}
+
+ 
+
     return (
       <div className="App">
           <h1>Code Pieces</h1>
@@ -55,6 +72,11 @@ const App = () => {
       	  </Link>
 		  
 		  <Switch>
+		  	<Route path = '/editpieceform' render = {() => {
+        		return (
+          			<EditPieceForm/>
+        		)
+      		}}/>
 
 			<Route path = '/addpiece' render = {() => {
         		return (
@@ -66,7 +88,9 @@ const App = () => {
 				return (
 					<Pieces pieces = { pieces } 
 						    setPieces = { setPieces }
-				            likePiece = { likePiece } 
+							likePiece = { likePiece } 
+							deletePiece = { deletePiece }
+							
 					/>
 
 				)
@@ -78,3 +102,4 @@ const App = () => {
   }
 
 export default App;
+ 
