@@ -5,6 +5,37 @@
   justify-content: center;
   align-items: center;
 }
+/*Menu*/
+.menu {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: .8rem;
+  -webkit-box-shadow: 0px 5px 5px 0px rgb(22, 49, 168);
+  -moz-box-shadow: 0px 5px 5px 0px rgb(22, 49, 168);
+  box-shadow: 0px 5px 5px 0px rgb(22, 49, 168);
+  
+}
+
+nav {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  color: #CCC5C5;
+}
+
+.menu-link {
+  color:  rgb(22, 49, 168);
+  text-decoration: none;
+}
+
+
+
+
+
+/*Piece*/
 
 .piece {
   margin: 5rem auto;
