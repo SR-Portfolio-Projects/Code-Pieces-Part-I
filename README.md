@@ -1,4 +1,6 @@
 # Code-Pieces-Part-I
+**Small Application that simply allows you to add post, called code pieces, about coding. This application has the ability to preform basic CRUD oprations on the post.**
+
 
 ### Branches
 - [part1](https://github.com/SR-Portfolio-Projects/Code-Pieces-Part-I/tree/part1)
