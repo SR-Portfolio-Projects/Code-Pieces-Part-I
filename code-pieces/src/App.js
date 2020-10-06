@@ -10,6 +10,7 @@ import Pieces from './components/Pieces';
 import './App.css';
 import AddPiece from './components/codePieces/AddPiece';
 import EditPieceForm from './components/codePieces/EditPieceForm';
+import Menu from './components/Menu';
 
 
 const App = () => {
@@ -66,11 +67,7 @@ const App = () => {
 
     return (
       <div className="App">
-          <h1>Code Pieces</h1>
-		  <Link to = '/addpiece'>
-        	Add Piece
-      	  </Link>
-		  
+		  <Menu />
 		  <Switch>
 		  	<Route path = '/editpieceform' render = {() => {
         		return (
