@@ -14,9 +14,9 @@ function Menu() {
                     Pieces Feed
                 </Link>
 
-                <Link className = 'menu-link' to = '/addpiece'>
+                {/* <Link className = 'menu-link' to = '/addpiece'>
                     My Pieces
-                </Link>
+                </Link> */}
             </nav>
         </div>
      )

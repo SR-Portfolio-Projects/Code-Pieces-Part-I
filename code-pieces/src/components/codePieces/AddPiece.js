@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AddPieceHeader from "./AddPieceHeader";
 
 
 const AddPiece = ({addPiece}) => {
@@ -74,6 +75,9 @@ const AddPiece = ({addPiece}) => {
 
 
     return (
+      <div className = 'add-piece-page'>
+              <AddPieceHeader />
+
       <div className = 'form'>
         <h2>Add Your Code Piece</h2>
         <form onSubmit={handleSubmit} className="AddPiece">
@@ -97,6 +101,7 @@ const AddPiece = ({addPiece}) => {
                 type="submit" 
                 >Create Piece</button>
         </form>
+      </div>
       </div>
     );
   }

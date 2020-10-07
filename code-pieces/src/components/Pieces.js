@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Piece from './codePieces/Piece';
-import PiecesHeader from './PiecesHeader';
+import PiecesHeader from './codePieces/PiecesHeader';
 
 
 
