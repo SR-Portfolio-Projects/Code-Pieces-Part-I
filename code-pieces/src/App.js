@@ -15,57 +15,14 @@ import Menu from './components/Menu';
 
 
 const App = () => {
-  const [ pieces, setPieces, handleCreate] = usePieces()
-  
+  const [ pieces,
+		  setPieces, 
+		  handleCreate, 
+		  likePiece, 
+		  deletePiece
+		] = usePieces()
 
-//   const history = useHistory()
-
-//   const handleCreate = piece => {
-// 	setPieces([...pieces, piece])
-// 	setTimeout(() => {
-// 		history.push('/');
-// 	  }, 100);
-//   };
-
-//   const handleEdit = pieceId => {
-// 	  alert("On the way")
-//   }
-
-  
-
-  const likePiece = (pieceId, isLikedState) => {
-		const { liked, isLiked } = isLikedState;
-
-		const likedConditioning = (likedBool) => {
-			setPieces(
-				pieces.map((piece) => {
-					const changedValue =
-						likedBool !== true ? piece.likes + 1 : piece.likes - 1;
-					if (piece.id === pieceId) {
-						return { ...piece, likes: changedValue };
-					}
-					return piece;
-				})
-			);
-		};
-
-		if (liked === false) {
-			likedConditioning(liked);
-		} else if (liked === true) {
-			likedConditioning(liked);
-		}
-		isLiked(!liked);
-	};
-
-	const deletePiece = (clickedPiece) => {
-		alert('Are you sure?')
-		setPieces(
-			pieces.filter(piece => piece.id !== clickedPiece)
-		)
-	}
-
- 
-
+		
     return (
       <div className="App">
 		  <Menu />
