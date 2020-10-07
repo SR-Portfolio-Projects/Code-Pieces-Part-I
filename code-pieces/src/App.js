@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Route, Switch } from 'react-router';
 import { useHistory, Link } from 'react-router-dom';
 
-import dummyPieces from './data'
+// import dummyPieces from './data'
 
+import {usePieces} from './hooks/usePieces'
 import Pieces from './components/Pieces';
 
 
@@ -14,7 +15,7 @@ import Menu from './components/Menu';
 
 
 const App = () => {
-  const [ pieces, setPieces] = useState(dummyPieces)
+  const [ pieces, setPieces] = usePieces()
   
 
   const history = useHistory()
@@ -26,9 +27,9 @@ const App = () => {
 	  }, 100);
   };
 
-  const handleEdit = pieceId => {
-	  alert("On the way")
-  }
+//   const handleEdit = pieceId => {
+// 	  alert("On the way")
+//   }
 
   
 
