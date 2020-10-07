@@ -1,15 +1,40 @@
 .App {
-  background-color: #ccc5c5;
+  background-color: #CCC5C5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-h1 {
-  font-size: 5rem;
+/*Menu*/
+.menu {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: .8rem;
+  -webkit-box-shadow: 0px 5px 5px 0px rgb(22, 49, 168);
+  -moz-box-shadow: 0px 5px 5px 0px rgb(22, 49, 168);
+  box-shadow: 0px 5px 5px 0px rgb(22, 49, 168);
 }
 
+nav {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  color: #CCC5C5;
+}
+
+.menu-link {
+  color:  rgb(22, 49, 168);
+  text-decoration: none;
+}
+
+
+
+
+
+/*Piece*/
 
 .piece {
   margin: 5rem auto;
@@ -36,7 +61,7 @@ h1 {
 }
 
 .piece p{
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding-top: .5rem;
 }
 
@@ -70,7 +95,6 @@ h1 {
   justify-content: space-between;
 }
 
-
 /*Comments*/
 
 .comments-button {
@@ -94,7 +118,6 @@ h1 {
   margin: 5rem 0 1rem 0;
 }
 
-
 form {
   display: flex;
   flex-direction: column;
@@ -111,3 +134,71 @@ textarea {
   margin: 10rem 0;
 }
 
+/*Header*/
+.header {
+  width: 100%;
+  background-color: rgb(22, 49, 168);
+  color: #CCC5C5;
+  margin-bottom: 2rem;
+}
+
+.header h1{
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sub-info {
+  margin: 0 auto;
+  width: 90%;
+  display:flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.sub {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-icon {
+  font-size: 5rem;
+  align-self: center;
+  margin-bottom: 2rem;
+
+}
+
+.sub p {
+  font-size: 2rem;
+}
+
+/*Add Piece */
+
+.add-piece-page {
+  width: 100%;
+  padding: 5rem;
+  padding-top: .8rem;
+}
+.add-piece-sub {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-piece-sub-icon {
+  font-size: 5rem;
+  align-self: center;
+  margin-bottom: 2rem;
+
+}
+
+.add-piece-sub p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto;
+  width: 80%;
+}
