@@ -6,6 +6,16 @@ import dummyPieces from '../data';
 export const usePieces = () => {
     const [ pieces, setPieces] = useState(dummyPieces);
 
-    return [pieces, setPieces];
+    const history = useHistory()
+
+    const handleCreate = piece => {
+      setPieces([...pieces, piece])
+      setTimeout(() => {
+          history.push('/');
+        }, 100);
+    };
+
+    return [pieces, setPieces, handleCreate];
+
 
 }

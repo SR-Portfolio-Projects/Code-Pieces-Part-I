@@ -4,7 +4,7 @@ import { useHistory, Link } from 'react-router-dom';
 
 // import dummyPieces from './data'
 
-import {usePieces} from './hooks/usePieces'
+import { usePieces } from './hooks/usePieces'
 import Pieces from './components/Pieces';
 
 
@@ -15,17 +15,17 @@ import Menu from './components/Menu';
 
 
 const App = () => {
-  const [ pieces, setPieces] = usePieces()
+  const [ pieces, setPieces, handleCreate] = usePieces()
   
 
-  const history = useHistory()
+//   const history = useHistory()
 
-  const handleCreate = piece => {
-	setPieces([...pieces, piece])
-	setTimeout(() => {
-		history.push('/');
-	  }, 100);
-  };
+//   const handleCreate = piece => {
+// 	setPieces([...pieces, piece])
+// 	setTimeout(() => {
+// 		history.push('/');
+// 	  }, 100);
+//   };
 
 //   const handleEdit = pieceId => {
 // 	  alert("On the way")
