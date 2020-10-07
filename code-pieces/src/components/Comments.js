@@ -4,20 +4,18 @@ import { faComments, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
 import Comment from './comments/Comment';
-
+import { useComments} from '../hooks/useComments'
 
 
 const Comments = (props) => {
 	const { numOfComments, commentsList } = props;
-	const [commentsOpen, setCommentsOpen] = useState(false)
+	const [commentsOpen, 
+		   setCommentsOpen,
+		   handleClick
+		  ] = useComments(false)
 	console.log(commentsList.length);
 
-	const handleClick = () => {
-		console.log('clicked');
-		setCommentsOpen({commentsOpen: !commentsOpen})
-		console.log(commentsOpen);
-		
-	}
+	
 
 	return (
 	    <div className="comment-section-container" key="comment-container">
