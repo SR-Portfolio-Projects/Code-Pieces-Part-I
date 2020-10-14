@@ -17,11 +17,6 @@ const PieceDetails = ({ piece, likePiece, deletePiece }) => {
           <Link to = {`/piece/${piece.id}`}>
             <h3>{piece.title}</h3>
             </Link>
-              <LikePiece
-                likePiece= {() => likePiece(piece.id, { liked, isLiked })}
-                numberOfLikes = { piece.likes }
-                liked = { liked }
-              />
           </div>
         <div>
         <p>Piece by { piece.user.displayName }</p>
@@ -38,7 +33,15 @@ const PieceDetails = ({ piece, likePiece, deletePiece }) => {
           <p>{  piece.content }</p>
         </div>
       </div>
+      <div className = 'bottom-actions'>
+            <LikePiece
+                likePiece= {() => likePiece(piece.id, { liked, isLiked })}
+                numberOfLikes = { piece.likes }
+                liked = { liked }
+              />
             <Comments numOfComments = { piece.numOfComments } commentsList = {piece.commentsList} />
+            </div>
+            
     </div>
   );
 };

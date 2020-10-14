@@ -18,7 +18,7 @@ const Comments = (props) => {
 
 			<div className = 'comments-button' onClick = { handleClick }>
 						<p className="comments-number">{ numOfComments } comments</p>
-						<FontAwesomeIcon icon = { faComments } />
+						{/* <FontAwesomeIcon icon = { faComments } /> */}
 			</div>
 
 				{ commentsList.length && (
