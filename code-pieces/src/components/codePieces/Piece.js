@@ -47,8 +47,12 @@ const Piece = (props) => {
         </div>
       </div>
       <div className="content">
-        <DeletePiece deletePiece = {() => handleDelete() }  />  
-        <EditPieceLink/>
+        <div className = 'content-actions'>
+          <DeletePiece deletePiece = {() => handleDelete() }  />  
+          <EditPieceLink/>
+
+        </div>
+        
         <p>{  clickedPiece.content }</p>
       </div>
     </div>

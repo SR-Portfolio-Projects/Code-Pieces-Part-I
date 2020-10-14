@@ -88,6 +88,15 @@ nav {
   font-weight: bolder;
 }
 
+.content-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit {
+  margin-left: 3rem;
+}
+
 .piece-buttons {
   margin: 0 auto;
   padding: 2rem 0 2rem 0;

@@ -7,7 +7,7 @@ const EditPiece = (props) => {
 	// const {  } = props;
 
 	return (
-		<div className="edit-section" key="edit-icon-container">
+		<div className="edit" key="edit-icon-container">
 		    <Link to = '/editpieceform'>
             <FontAwesomeIcon
                     icon={faEdit}
