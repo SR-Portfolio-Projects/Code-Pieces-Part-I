@@ -1,12 +1,12 @@
 import React from "react";
 
 const Comment = ({ comment }) => {
-    const { id, username, text } = comment;
+    const { username, text } = comment;
   
 
 	return (
 	    <div>
-            <p>{ text }</p>
+            <p>{ text } <span> Comment By:{ username} </span></p>
 			
 		</div>
 	);

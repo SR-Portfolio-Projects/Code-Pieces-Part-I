@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComments, faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -10,10 +10,10 @@ import { useComments} from '../hooks/useComments'
 const Comments = (props) => {
 	const { numOfComments, commentsList } = props;
 	const [commentsOpen, 
-		   setCommentsOpen,
+		//    setCommentsOpen,
 		   handleClick
 		  ] = useComments(false)
-	console.log(commentsList.length);
+	// console.log(commentsList.length);
 
 	
 

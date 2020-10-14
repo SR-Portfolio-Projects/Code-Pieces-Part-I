@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import { usePieces } from '../../hooks/usePieces';
 import moment from 'moment';
 import LikePiece from './LikePiece'
@@ -11,14 +10,14 @@ import Comments from '../Comments';
 const Piece = (props) => {
     const [liked, isLiked] = useState(false);
     const [pieces,
-           setPieces, 
-           handleCreate, 
+        //    setPieces, 
+        //    handleCreate, 
            likePiece, 
            deletePiece
           ] = usePieces()
     // console.log(props.match.params.id)
     const id = props.match.params.id
-    const piece = pieces.filter(piece => piece.id == id)
+    const piece = pieces.filter(piece => piece.id === id)
     // console.log(piece[0]);
     const clickedPiece = piece[0]
  

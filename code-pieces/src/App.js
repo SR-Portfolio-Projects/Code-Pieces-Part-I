@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router';
-import { useHistory, Link } from 'react-router-dom';
-
-// import dummyPieces from './data'
 
 import { usePieces } from './hooks/usePieces'
 import Pieces from './components/Pieces';
@@ -12,7 +9,6 @@ import './App.css';
 import AddPiece from './components/codePieces/AddPiece';
 import EditPieceForm from './components/codePieces/EditPieceForm';
 import Menu from './components/Menu';
-import PD from './PD';
 import Piece from './components/codePieces/Piece';
 
 
