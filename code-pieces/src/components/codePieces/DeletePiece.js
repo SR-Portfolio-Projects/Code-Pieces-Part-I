@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 const DeletePiece = ({deletePiece}) => {
+  // console.log(pieces)
 
     return (
       <div className = 'delete'>

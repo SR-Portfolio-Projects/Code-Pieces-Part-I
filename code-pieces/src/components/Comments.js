@@ -1,30 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComments, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
 import Comment from './comments/Comment';
-
+import { useComments} from '../hooks/useComments'
 
 
 const Comments = (props) => {
 	const { numOfComments, commentsList } = props;
-	const [commentsOpen, setCommentsOpen] = useState(false)
-	console.log(commentsList.length);
-
-	const handleClick = () => {
-		console.log('clicked');
-		setCommentsOpen({commentsOpen: !commentsOpen})
-		console.log(commentsOpen);
-		
-	}
+	const [commentsOpen, 
+		   handleClick
+		  ] = useComments(false)
 
 	return (
 	    <div className="comment-section-container" key="comment-container">
 
 			<div className = 'comments-button' onClick = { handleClick }>
 						<p className="comments-number">{ numOfComments } comments</p>
-						<FontAwesomeIcon icon = { faComments } />
+						{/* <FontAwesomeIcon icon = { faComments } /> */}
 			</div>
 
 				{ commentsList.length && (
@@ -34,13 +28,13 @@ const Comments = (props) => {
 							<FontAwesomeIcon icon = { faTimes } />
                   		</div>
 
-						{commentsList.map((comment, index) => (
+								{commentsList.map((comment, index) => (
 
-                            <div className = 'comment-list-item' key = {index} >
-								<Comment comment = { comment } />
-                            </div>
+									<div className = 'comment-list-item' key = {index} >
+										<Comment comment = { comment } />
+									</div>
 
-                        ))}
+								))}
 						<input></input>
 
 						

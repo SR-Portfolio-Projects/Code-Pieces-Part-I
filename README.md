@@ -39,6 +39,6 @@
 - React
 - React Router
 - React Router DOM
-- Hooks
+- Hooks / Custom Hooks
 
 **Application allows you to create, read, update and delete post, which I call code pieces, and comments. to the page. The user can read create update and delete post

@@ -57,6 +57,7 @@ nav {
 
 .piece h3{
   font-size: 2rem;
+  color: #FFFFFF;
  
 }
 
@@ -66,25 +67,32 @@ nav {
 }
 
 .like-section {
-  width: 15rem;
-  margin-top: .3rem;
+  width: 5rem;
+  margin-left: 2rem;
+  padding: .5rem;
   display: flex;
   justify-content: space-around;
 }
 
-.like-section-wrapper {
-  padding: .5rem;
-  flex-basis: 35%;
-  border: 2px solid black;
-  display: flex;
-  justify-content: space-between;
-}
 
 .piece .content {
   margin: 1rem auto;
   width: 90%;
   font-size: 1.7rem;
   font-weight: bolder;
+}
+
+.content-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.bottom-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit {
+  margin-left: 3rem;
 }
 
 .piece-buttons {
@@ -98,6 +106,8 @@ nav {
 /*Comments*/
 
 .comments-button {
+  margin-right: 2rem;
+
   cursor: pointer;
 }
 
@@ -128,7 +138,9 @@ form {
   border-top: none;
   border-right: none;
   border-left: none;
+  
 }
+
 
 textarea {
   margin: 10rem 0;

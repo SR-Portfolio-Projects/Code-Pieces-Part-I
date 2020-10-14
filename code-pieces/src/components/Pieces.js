@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
-
-import Piece from './codePieces/Piece';
+import React from 'react'
+import PieceDetails from './codePieces/PieceDetails';
 import PiecesHeader from './codePieces/PiecesHeader';
 
 
 
-const Pieces = ({ pieces, likePiece, deletePiece, editPiece }) => {
+const Pieces = ({ pieces, likePiece, deletePiece}) => {
 
   return (
     <div className="Pieces">
@@ -13,14 +12,20 @@ const Pieces = ({ pieces, likePiece, deletePiece, editPiece }) => {
       
       {pieces.map((piece, index) => {
 
-        return <Piece  key= { piece.id } 
+        return (
+        
+        <PieceDetails  key= { piece.id } 
                       piece = { piece } 
                       deletePiece = { deletePiece } 
                       likePiece = { likePiece } 
                       liked = { false } />
+                      )
       })}      
+
+
     </div>
   )
 }
 
 export default Pieces;
+

@@ -25,23 +25,23 @@ const AddPiece = ({addPiece}) => {
       commentsList: [
         {
           id: 36,
-          username: "twitch",
-          text: "Epic Street Fighter action here in Vegas!",
+          username: "Lisa Lisa",
+          text: "Lear Code and repeat",
         },
         {
           id: 37,
-          username: "michaelmarzetta",
-          text: "Omg that match was crazy",
+          username: "Nita Rocher",
+          text: "Omg learning that was crazy",
         },
         {
           id: 38,
-          username: "themexican_leprechaun",
-          text: "What a setup",
+          username: "Wiz Kid",
+          text: "Nice work on this concept",
         },
         {
           id: 39,
-          username: "dennis_futbol",
-          text: "It that injustice",
+          username: "Dennis The Menace",
+          text: "That is some Bad Boy Bad Boy code",
         },
       ],
       createdAt: new Date(),
