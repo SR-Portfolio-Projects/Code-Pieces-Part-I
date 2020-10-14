@@ -52,7 +52,7 @@ const App = () => {
 
 			<Route path = '/piece/:id' render = {(props) => {
         		return (
-					<Piece {...props} />
+					<Piece {...props} deletePiece = { deletePiece } />
           			// <PD />
         		)
       		}}/>

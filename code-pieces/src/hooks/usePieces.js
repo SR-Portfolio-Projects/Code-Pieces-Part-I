@@ -47,6 +47,8 @@ export const usePieces = () => {
 		setPieces(
 			pieces.filter(piece => piece.id !== clickedPiece)
 		)
+		return null
+		
 	}
 
     return [pieces, setPieces, handleCreate, likePiece, deletePiece];
