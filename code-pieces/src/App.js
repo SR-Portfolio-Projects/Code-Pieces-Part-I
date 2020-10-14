@@ -12,6 +12,8 @@ import './App.css';
 import AddPiece from './components/codePieces/AddPiece';
 import EditPieceForm from './components/codePieces/EditPieceForm';
 import Menu from './components/Menu';
+import PD from './PD';
+import Piece from './components/codePieces/Piece';
 
 
 const App = () => {
@@ -27,6 +29,7 @@ const App = () => {
       <div className="App">
 		  <Menu />
 		  <Switch>
+		  
 		  	<Route path = '/editpieceform' render = {() => {
         		return (
           			<EditPieceForm/>
@@ -39,7 +42,7 @@ const App = () => {
         		)
       		}}/>
 
-			<Route path = '/' render = { () => {
+			<Route path = '/pieces' render = { () => {
 				return (
 					<Pieces pieces = { pieces } 
 						    setPieces = { setPieces }
@@ -50,6 +53,13 @@ const App = () => {
 
 				)
 			}} />
+
+			<Route path = '/piece/:id' render = {(props) => {
+        		return (
+					<Piece {...props} />
+          			// <PD />
+        		)
+      		}}/>
 
 		</Switch>
       </div>

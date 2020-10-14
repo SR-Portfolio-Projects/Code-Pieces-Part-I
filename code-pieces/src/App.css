@@ -57,6 +57,7 @@ nav {
 
 .piece h3{
   font-size: 2rem;
+  color: #FFFFFF;
  
 }
 
@@ -128,7 +129,9 @@ form {
   border-top: none;
   border-right: none;
   border-left: none;
+  
 }
+
 
 textarea {
   margin: 10rem 0;

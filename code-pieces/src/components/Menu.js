@@ -6,11 +6,14 @@ function Menu() {
      return (
         <div className = 'menu'>
             <nav>
+            <Link className = 'menu-link' to = '/'>
+                    Homepage
+                </Link>
                 <Link className = 'menu-link' to = '/addpiece'>
                     Add Piece
                 </Link>
 
-                <Link className = 'menu-link' to = '/'>
+                <Link className = 'menu-link' to = '/pieces'>
                     Pieces Feed
                 </Link>
 

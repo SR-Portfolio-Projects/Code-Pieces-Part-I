@@ -1,40 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { usePieces } from '../../hooks/usePieces';
 import moment from 'moment';
-import LikePiece from './LikePiece';
-import Comments from '../Comments';
+import LikePiece from './LikePiece'
 import DeletePiece from './DeletePiece';
 import EditPieceLink from './EditPieceLink';
+import Comments from '../Comments';
 
-const Piece = ({ piece, likePiece, deletePiece }) => {
-  const [liked, isLiked] = useState(false);
+
+const Piece = (props) => {
+    const [liked, isLiked] = useState(false);
+    const [pieces,
+           setPieces, 
+           handleCreate, 
+           likePiece, 
+           deletePiece
+          ] = usePieces()
+    // console.log(props.match.params.id)
+    const id = props.match.params.id
+    const piece = pieces.filter(piece => piece.id == id)
+    // console.log(piece[0]);
+    const clickedPiece = piece[0]
+ 
 
   return (
     <div className="piece">
-      <div className="piece-info">
-        <div className="piece-header">
-          <div>
-            <h3>{piece.title}</h3>
-              <LikePiece
-                likePiece= {() => likePiece(piece.id, { liked, isLiked })}
-                numberOfLikes = { piece.likes }
-                liked = { liked }
-              />
-          </div>
+    <div className="piece-info">
+      <div className="piece-header">
         <div>
-        <p>Piece by { piece.user.displayName }</p>
-        <p>{ moment(piece.createdAt).calendar() }</p>
+          <h3>{clickedPiece.title}</h3>
+            <LikePiece
+              likePiece= {() => likePiece(clickedPiece.id, { liked, isLiked })}
+              numberOfLikes = { clickedPiece.likes }
+              liked = { liked }
+            />
         </div>
-        </div>
-        <div className="content">
-          <DeletePiece deletePiece = {() => deletePiece(piece.id) } />  
-          <EditPieceLink/>
-          <p>{  piece.content }</p>
-        </div>
+      <div>
+      <p>Piece by { clickedPiece.user.displayName }</p>
+      <p>{ moment(clickedPiece.createdAt).calendar() }</p>
       </div>
-            <Comments numOfComments = { piece.numOfComments } commentsList = {piece.commentsList} />
+      </div>
+      <div className="content">
+        <DeletePiece deletePiece = { deletePiece }  />  
+        <EditPieceLink/>
+        <p>{  clickedPiece.content }</p>
+      </div>
     </div>
+          <Comments numOfComments = { clickedPiece.numOfComments } commentsList = {clickedPiece.commentsList} />
+  </div>
   );
-};
-
+}
 
 export default Piece;
