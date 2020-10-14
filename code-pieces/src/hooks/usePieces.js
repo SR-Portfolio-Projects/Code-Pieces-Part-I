@@ -11,7 +11,7 @@ export const usePieces = () => {
     const handleCreate = piece => {
       setPieces([...pieces, piece])
       setTimeout(() => {
-          history.push('/');
+          history.push('/pieces');
         }, 100);
     };
 
@@ -37,7 +37,7 @@ export const usePieces = () => {
 		} else if (liked === true) {
 			likedConditioning(liked);
 		}
-		isLiked(!liked);
+			isLiked(!liked);
     };
     
 

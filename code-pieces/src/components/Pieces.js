@@ -4,7 +4,7 @@ import PiecesHeader from './codePieces/PiecesHeader';
 
 
 
-const Pieces = ({ pieces, likePiece, deletePiece, editPiece }) => {
+const Pieces = ({ pieces, likePiece, deletePiece}) => {
 
   return (
     <div className="Pieces">

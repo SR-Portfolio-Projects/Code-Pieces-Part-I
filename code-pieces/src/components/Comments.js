@@ -10,12 +10,8 @@ import { useComments} from '../hooks/useComments'
 const Comments = (props) => {
 	const { numOfComments, commentsList } = props;
 	const [commentsOpen, 
-		//    setCommentsOpen,
 		   handleClick
 		  ] = useComments(false)
-	// console.log(commentsList.length);
-
-	
 
 	return (
 	    <div className="comment-section-container" key="comment-container">
@@ -32,13 +28,13 @@ const Comments = (props) => {
 							<FontAwesomeIcon icon = { faTimes } />
                   		</div>
 
-						{commentsList.map((comment, index) => (
+								{commentsList.map((comment, index) => (
 
-                            <div className = 'comment-list-item' key = {index} >
-								<Comment comment = { comment } />
-                            </div>
+									<div className = 'comment-list-item' key = {index} >
+										<Comment comment = { comment } />
+									</div>
 
-                        ))}
+								))}
 						<input></input>
 
 						

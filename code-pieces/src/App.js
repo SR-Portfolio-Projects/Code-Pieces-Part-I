@@ -27,35 +27,40 @@ const App = () => {
 		  <Switch>
 		  
 		  	<Route path = '/editpieceform' render = {() => {
-        		return (
-          			<EditPieceForm/>
-        		)
-      		}}/>
+					return (
+						<EditPieceForm/>
+					)
+				}}
+			/>
 
 			<Route path = '/addpiece' render = {() => {
-        		return (
-          			<AddPiece  addPiece = { handleCreate }/>
-        		)
-      		}}/>
+					return (
+						<AddPiece  addPiece = { handleCreate }/>
+					)
+				}}
+			/>
 
 			<Route path = '/pieces' render = { () => {
-				return (
-					<Pieces pieces = { pieces } 
-						    setPieces = { setPieces }
-							likePiece = { likePiece } 
-							deletePiece = { deletePiece }
-							
-					/>
+					return (
+								<Pieces pieces = { pieces } 
+										setPieces = { setPieces }
+										likePiece = { likePiece } 
+										deletePiece = { deletePiece }
+										
+								/>
 
-				)
-			}} />
+						)
+					}} 
+			/>
 
 			<Route path = '/piece/:id' render = {(props) => {
-        		return (
-					<Piece {...props} deletePiece = { deletePiece } />
-          			// <PD />
-        		)
-      		}}/>
+					return (
+								<Piece {...props} deletePiece = { deletePiece }
+												likePiece = { likePiece } 
+								/>
+							)
+					}}
+			/>
 
 		</Switch>
       </div>

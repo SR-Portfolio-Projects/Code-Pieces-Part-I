@@ -7,9 +7,9 @@ export const useComments = () => {
 
 
     const handleClick = () => {
-		console.log('clicked');
-		setCommentsOpen({commentsOpen: !commentsOpen})
-		console.log(commentsOpen);
+        console.log('clicked');
+        setCommentsOpen({commentsOpen: !commentsOpen})
+        console.log(commentsOpen);
 		
     }
     
