@@ -35,11 +35,7 @@ const Piece = (props) => {
       <div className="piece-header">
         <div>
           <h3>{clickedPiece.title}</h3>
-            <LikePiece
-              likePiece= {() => props.likePiece(clickedPiece.id, { liked, isLiked })}
-              numberOfLikes = { clickedPiece.likes }
-              liked = { liked }
-            />
+            
         </div>
         <div>
           <p>Piece by { clickedPiece.user.displayName }</p>
@@ -56,7 +52,15 @@ const Piece = (props) => {
         <p>{  clickedPiece.content }</p>
       </div>
     </div>
+    <div className = 'bottom-actions'>
+          <LikePiece
+                    likePiece= {() => props.likePiece(clickedPiece.id, { liked, isLiked })}
+                    numberOfLikes = { clickedPiece.likes }
+                    liked = { liked }
+                  />
           <Comments numOfComments = { clickedPiece.numOfComments } commentsList = {clickedPiece.commentsList} />
+
+    </div>
   </div>
   );
 }
