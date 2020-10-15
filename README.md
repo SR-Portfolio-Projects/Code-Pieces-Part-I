@@ -1,5 +1,32 @@
 # Code-Pieces-Part-I
 **Small Application that simply allows you to add post, called code pieces, about coding. This application has the ability to preform basic CRUD oprations on the post.**
+### Concepts
+- React
+- React Router
+- React Router DOM
+- Hooks / Custom Hooks
+
+#### Pages
+- [x] View pieces page
+     - All pieces
+- [x] Pieces details page
+    - Page that displays the pieces(component to be imported into the Pieces page)
+- [x] Piece page
+    - Page that displays when a piece is clicked, information about one piece
+
+
+### Pieces Logic
+- [x] View Pieces Logic
+- [x] Create Piece Logic
+- [x] Delete Piece Logic
+- [ ] Edit Piece Logic
+
+### Comments Logic
+- [x] View Comments Logic
+- [ ] Create Comments Logic
+- [ ] Delete Comments Logic
+- [ ] Edit Comments Logic
+
 
 
 ### Branches
@@ -10,8 +37,7 @@
     - added ability to like pieces
 - [UI]()
     - React Router
-- [delete-piece]()
-    -ability to delete a piece
+
 
 ### The Code Pieces
 - [x] User has the ability to add a code piece
@@ -35,10 +61,4 @@
 
 
 
-### Concepts
-- React
-- React Router
-- React Router DOM
-- Hooks / Custom Hooks
 
-**Application allows you to create, read, update and delete post, which I call code pieces, and comments. to the page. The user can read create update and delete post

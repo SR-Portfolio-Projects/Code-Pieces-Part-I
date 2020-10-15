@@ -40,7 +40,16 @@ const App = () => {
 				}}
 			/>
 
-			<Route path = '/pieces' render = { () => {
+
+			<Route path = '/piece/:id' render = {(props) => {
+					return (
+								<Piece {...props} deletePiece = { deletePiece }
+												likePiece = { likePiece } 
+								/>
+							)
+					}}
+			/>
+			<Route path = '/' render = { () => {
 					return (
 								<Pieces pieces = { pieces } 
 										setPieces = { setPieces }
@@ -51,15 +60,6 @@ const App = () => {
 
 						)
 					}} 
-			/>
-
-			<Route path = '/piece/:id' render = {(props) => {
-					return (
-								<Piece {...props} deletePiece = { deletePiece }
-												likePiece = { likePiece } 
-								/>
-							)
-					}}
 			/>
 
 		</Switch>

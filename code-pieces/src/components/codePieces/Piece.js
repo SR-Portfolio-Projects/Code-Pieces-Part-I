@@ -23,7 +23,7 @@ const Piece = (props) => {
     const handleDelete = () => {
       props.deletePiece(clickedPiece.id)
       setTimeout(() => {
-        history.push("/pieces");
+        history.push("/");
       }, 500);
 
 

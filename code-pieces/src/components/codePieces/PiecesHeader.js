@@ -12,7 +12,7 @@ function PiecesHeader() {
                 <div className = 'sub'>
                     <FontAwesomeIcon icon={ faCode } className = 'sub-icon' />
                     <p>
-                        Macaroon cheesecake candy canes powder oat cake sugar plum halvah soufflé. Fruitcake topping soufflé bear claw tootsie.
+                        Code pieces is a place to meet new developers while sharing and learning tips and tricks. Talk about meaningful experiences, share jokes, ask questions if coding is invloved it belongs here.
                     </p>
 
                 </div>
@@ -20,7 +20,7 @@ function PiecesHeader() {
                 <div className = 'sub'>
                     <FontAwesomeIcon icon={ faUserSecret } className = 'sub-icon' />
                     <p>
-                        Discoverd some secerts, had a really meaningful ahhaa moment. Share your thoughts and feelings and help other developers.
+                        Discoverd some secerts, had a meaningful ahhaa moment. Share your thoughts and feelings and help other developers.
                     </p>
                     
                 </div>

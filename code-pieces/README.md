@@ -20,9 +20,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
     - Page that displays when a piece is clicked, information about one piece
 
 
-### Logic
+### Pieces Logic
 - [x] View Pieces Logic
 - [x] Create Piece Logic
 - [x] Delete Piece Logic
 - [ ] Edit Piece Logic
+
+### Comments Logic
+- [x] View Comments Logic
+- [ ] Create Comments Logic
+- [ ] Delete Comments Logic
+- [ ] Edit Comments Logic
 
