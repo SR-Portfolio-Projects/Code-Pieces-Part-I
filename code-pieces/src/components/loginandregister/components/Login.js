@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import loginImg from './login.svg';
+import loginImg from '../../../assets/login.svg';
 
 
 

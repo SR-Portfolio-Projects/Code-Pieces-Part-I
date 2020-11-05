@@ -10,7 +10,7 @@ import AddPiece from './components/codePieces/AddPiece';
 import EditPieceForm from './components/codePieces/EditPieceForm';
 import Menu from './components/Menu';
 import Piece from './components/codePieces/Piece';
-import Landing from './components/loginandregister/Landing';
+import Landing from './components/loginandregister/components/Landing';
 
 
 const App = () => {

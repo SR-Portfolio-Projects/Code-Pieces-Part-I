@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './landing.scss';
-import { Login, Register } from './index';
+import '../styles/landing.scss';
+import { Login, Register } from '../index';
 import LoginOrRegister from './LoginOrRegister';
 
 

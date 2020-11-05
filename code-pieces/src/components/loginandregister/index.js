@@ -1,5 +1,5 @@
-import './style.scss';
+import './styles/style.scss';
 
-export { Login } from './Login';
-export { Register } from './Register';
+export { Login } from './components/Login';
+export { Register } from './components/Register';
 
