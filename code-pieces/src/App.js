@@ -10,6 +10,7 @@ import AddPiece from './components/codePieces/AddPiece';
 import EditPieceForm from './components/codePieces/EditPieceForm';
 import Menu from './components/Menu';
 import Piece from './components/codePieces/Piece';
+import Landing from './components/loginandregister/Landing';
 
 
 const App = () => {
@@ -49,7 +50,7 @@ const App = () => {
 							)
 					}}
 			/>
-			<Route path = '/' render = { () => {
+			<Route path = '/pieces' render = { () => {
 					return (
 								<Pieces pieces = { pieces } 
 										setPieces = { setPieces }
@@ -61,6 +62,7 @@ const App = () => {
 						)
 					}} 
 			/>
+			<Route path ='/' component = { Landing } />
 
 		</Switch>
       </div>

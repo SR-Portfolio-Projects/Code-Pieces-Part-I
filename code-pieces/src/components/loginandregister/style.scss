@@ -1,0 +1,60 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .header {
+        font-size: 2.4rem;
+        color: #FFFFFF;
+        font-family: 'Libre Baskerville', serif;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        .image {
+            width: 21rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .form {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: fit-content;
+                label {
+                    font-size: 2rem;
+                    font-weight: bolder;
+                }
+                input {
+                    margin-top: .6rem;
+                    min-width: 18rem;
+                    height: 3.7rem;
+                    padding: 0 1rem;
+                    background-color:#F3F3F3;
+                    border: 0;
+                    border-radius: .4rem;
+                    margin-bottom: 3.1rem;
+                    transition: all 250ms ease-in-out;
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0 0 1.2rem .4rem #1631a8;
+
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+    }
+}
