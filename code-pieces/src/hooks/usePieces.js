@@ -1,10 +1,24 @@
 import { useState } from 'react';
 import { useHistory} from 'react-router-dom';
-
-import dummyPieces from '../data'; 
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 export const usePieces = () => {
-    const [ pieces, setPieces] = useState(dummyPieces);
+
+	const getPieces = () => {
+		axiosWithAuth()
+		.get('/pieces')
+		.then(res => {
+			console.log(res.data);
+			setPieces(res.data)
+			
+		})
+		.catch(err => console.log(err))
+	}
+
+	const [ pieces, setPieces] = useState(getPieces);
+
+	
+    
 
     const history = useHistory()
 

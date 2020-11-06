@@ -26,7 +26,6 @@ const App = () => {
       <div className="App">
 		  <Menu />
 		  <Switch>
-		  
 		  	<Route path = '/editpieceform' render = {() => {
 					return (
 						<EditPieceForm/>
@@ -62,7 +61,7 @@ const App = () => {
 						)
 					}} 
 			/>
-			<Route path ='/' component = { Landing } />
+			<Route exact path ='/' component = { Landing } />
 
 		</Switch>
       </div>
