@@ -8,7 +8,7 @@ export const usePieces = () => {
 		axiosWithAuth()
 		.get('/pieces')
 		.then(res => {
-			console.log(res.data);
+			// console.log(res.data);
 			setPieces(res.data)
 			
 		})
@@ -65,7 +65,7 @@ export const usePieces = () => {
 		
 	}
 
-    return [pieces, setPieces, handleCreate, likePiece, deletePiece];
+    return [pieces, setPieces, getPieces, handleCreate, likePiece, deletePiece];
 
 
 }

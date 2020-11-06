@@ -15,7 +15,8 @@ import Landing from './components/loginandregister/components/Landing';
 
 const App = () => {
   const [ pieces,
-		  setPieces, 
+		  setPieces,
+		  getPieces, 
 		  handleCreate, 
 		  likePiece, 
 		  deletePiece
@@ -43,8 +44,11 @@ const App = () => {
 
 			<Route path = '/piece/:id' render = {(props) => {
 					return (
-								<Piece {...props} deletePiece = { deletePiece }
-												likePiece = { likePiece } 
+								<Piece {...props} pieces = {pieces} 
+												  setPieces = { setPieces }
+												  getPieces = {getPieces} 
+												  deletePiece = { deletePiece }
+												  likePiece = { likePiece } 
 								/>
 							)
 					}}

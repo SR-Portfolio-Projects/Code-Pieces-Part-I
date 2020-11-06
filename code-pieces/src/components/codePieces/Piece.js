@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import { usePieces } from '../../hooks/usePieces';
 import moment from 'moment';
 import LikePiece from './LikePiece'
-import DeletePiece from './DeletePiece';
+import DeletePiece2 from './DeletePiece2';
 import EditPieceLink from './EditPieceLink';
 import Comments from '../Comments';
 import { useHistory } from 'react-router';
@@ -10,27 +10,30 @@ import { useHistory } from 'react-router';
 
 const Piece = (props) => {
     const [liked, isLiked] = useState(false);
-
-    const [pieces, 
-          ] = usePieces()
-          
+          console.log(props.pieces);
     const id = props.match.params.id
-    const piece = pieces.filter(item => item.id === id)
+    console.log(id);
+    const piece = props.pieces.filter(item => item.id === id)
+    console.log(piece);
     const clickedPiece = piece[0]
-    console.log(pieces);
+    console.log(clickedPiece);
  
     const history = useHistory()
+
+
     const handleDelete = () => {
       props.deletePiece(clickedPiece.id)
       setTimeout(() => {
-        history.push("/");
-      }, 500);
-
+        history.push("/pieces");
+      }, 30);
+      console.log(clickedPiece);
 
     }
 
   return (
     <div className="piece">
+      {(clickedPiece) ? 
+      <>
     <div className="piece-info">
       <div className="piece-header">
         <div>
@@ -44,7 +47,7 @@ const Piece = (props) => {
       </div>
       <div className="content">
         <div className = 'content-actions'>
-          <DeletePiece deletePiece = {() => handleDelete() }  />  
+          <DeletePiece2  clickedPiece = { clickedPiece } deletePiece = {handleDelete}/>  
           <EditPieceLink/>
 
         </div>
@@ -61,6 +64,8 @@ const Piece = (props) => {
           <Comments numOfComments = { clickedPiece.numOfComments } commentsList = {clickedPiece.commentsList} />
 
     </div>
+    </>
+    : null}
   </div>
   );
 }

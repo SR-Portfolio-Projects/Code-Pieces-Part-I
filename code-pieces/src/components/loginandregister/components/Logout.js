@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from "react-router";
 
 
 class Logout extends Component {
@@ -10,9 +11,11 @@ class Logout extends Component {
         }
     }
 
+    
+    
 
     logOut = e => {
-
+        console.log(this.props);
         
         console.log(localStorage.getItem('token'));
         const userToken = localStorage.getItem('token')
@@ -38,4 +41,5 @@ class Logout extends Component {
      )
   }
 }
-export default Logout;
+const LogoutRouter = withRouter(Logout);
+export default LogoutRouter;

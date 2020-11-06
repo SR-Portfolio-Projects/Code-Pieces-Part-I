@@ -8,7 +8,7 @@ function Menu() {
     const userToken =  localStorage.getItem('token')
      return (
          <>
-          {(!userToken) ? "LOADING......":
+          {(!userToken) ? null:
         <div className = 'menu'>
             <nav>
                 <Link className = 'menu-link' to = '/'>
