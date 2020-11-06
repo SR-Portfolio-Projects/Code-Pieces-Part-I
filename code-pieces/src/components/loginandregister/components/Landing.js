@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Route, Switch, Link } from 'react-router-dom';
+
 import '../styles/landing.scss';
 import { Login, Register } from '../index';
 import LoginOrRegister from './LoginOrRegister';
@@ -21,19 +23,25 @@ class Landing extends Component{
   return (
     <div className="App">
       <div className="login-register">
-        <div className="container">
+                <div className="container">
 
-          {isLogginActive && <Login containerRef = {(ref) => this.current = ref} /> }
-          {!isLogginActive && <Register containerRef = {(ref) => this.current = ref} />}
+                  {isLogginActive && <Route  component={ Login } containerRef = {(ref) => this.current = ref} /> }
+                  {!isLogginActive && <Route  component={ Register } containerRef = {(ref) => this.current = ref} />}
 
-        </div>
-        <div className="div">
-          <LoginOrRegister current = { current } 
-                           currentActive={currentActive}
-                           containerRef = {ref => this.logInOrRegister = ref} 
-                           onClick = { this.changeState.bind(this)} />
-        </div>
-      </div>
+                </div>
+              
+              <Route path="/" render = { (props) => {
+                  return (
+                      <div>
+                      <LoginOrRegister {...props} current = { current } 
+                                  currentActive={currentActive}
+                                  containerRef = {ref => this.logInOrRegister = ref} 
+                                  onClick = { this.changeState.bind(this)} />
+                                  </div>
+                                
+                  )
+              }} />
+          </div>
       
     </div>
   );
