@@ -11,8 +11,8 @@ function Menu() {
           {(!userToken) ? null:
         <div className = 'menu'>
             <nav>
-                <Link className = 'menu-link' to = '/'>
-                    Homepage
+                <Link className = 'menu-link' to = '/userhome'>
+                    Home
                 </Link>
                 <Link className = 'menu-link' to = '/addpiece'>
                     Add Piece

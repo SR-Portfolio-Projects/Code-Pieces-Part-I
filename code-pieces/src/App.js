@@ -11,7 +11,7 @@ import EditPieceForm from './components/codePieces/EditPieceForm';
 import Menu from './components/Menu';
 import Piece from './components/codePieces/Piece';
 import Landing from './components/loginandregister/components/Landing';
-
+import UserHome from './components/UserHomePage';
 
 const App = () => {
   const [ pieces,
@@ -27,6 +27,7 @@ const App = () => {
       <div className="App">
 		  <Menu />
 		  <Switch>
+			  <Route path = '/userhome' component = { UserHome }/>
 		  	<Route path = '/editpieceform' render = {() => {
 					return (
 						<EditPieceForm/>

@@ -32,7 +32,7 @@ export class Login extends Component {
                 .post('/login', this.state.credentials)
                 .then(res => {
                     localStorage.setItem('token', res.data.payload);
-                    this.props.history.push('/pieces');
+                    this.props.history.push('/userhome');
                 })
                 .catch(err => console.log(err));
             };
