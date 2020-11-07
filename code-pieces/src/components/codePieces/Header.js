@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode, faUserSecret, faPeopleCarry } from '@fortawesome/free-solid-svg-icons'
 
 
-function PiecesHeader() {
+function Header() {
      return (
         <div className = 'header'>
             <h1>Code Pieces</h1>
@@ -36,4 +36,4 @@ function PiecesHeader() {
         </div>
      )
   }
-export default PiecesHeader;
+export default Header;

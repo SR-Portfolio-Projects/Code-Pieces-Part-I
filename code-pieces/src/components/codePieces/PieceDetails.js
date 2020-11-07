@@ -25,7 +25,7 @@ const PieceDetails = ({ piece, likePiece, deletePiece }) => {
         </div>
         <div className="content">
           <div className = 'content-actions'>
-            <DeletePiece deletePiece = {() => deletePiece(piece.id) } />  
+            <DeletePiece piece = { piece } deletePiece = { deletePiece } />  
             <EditPieceLink />
 
           </div>

@@ -2,13 +2,13 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
-const DeletePiece = ({piece, deletePiece}) => {
+const DeletePiece2 = ({ deletePiece, clickedPiece}) => {
   // console.log(pieces)
 
     return (
       <div className = 'delete'>
         
-          <FontAwesomeIcon onClick = {() => deletePiece(piece.id) } 
+          <FontAwesomeIcon onClick = {() => deletePiece(clickedPiece.id) } 
 				                   icon={faTrashAlt}
 	        />
        
@@ -16,5 +16,5 @@ const DeletePiece = ({piece, deletePiece}) => {
     );
   }
 
-export default DeletePiece;
+export default DeletePiece2;
 

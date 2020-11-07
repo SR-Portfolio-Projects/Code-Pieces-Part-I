@@ -1,27 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Header from './codePieces/Header';
+import Logout from './loginandregister/components/Logout';
 
 function Menu() {
+    console.log(localStorage.getItem('token'));
+    const userToken =  localStorage.getItem('token')
      return (
+         <>
+          {(!userToken) ? null:
         <div className = 'menu'>
             <nav>
-                {/* <Link className = 'menu-link' to = '/'>
+                <Link className = 'menu-link' to = '/'>
                     Homepage
-                </Link> */}
+                </Link>
                 <Link className = 'menu-link' to = '/addpiece'>
                     Add Piece
                 </Link>
 
-                <Link className = 'menu-link' to = '/'>
+                <Link className = 'menu-link' to = '/pieces'>
                     Pieces Feed
                 </Link>
-
-                {/* <Link className = 'menu-link' to = '/addpiece'>
-                    My Pieces
-                </Link> */}
+                    <Logout /> 
             </nav>
+            
         </div>
+        
+    }
+
+    <Header />
+        </>
      )
   }
 export default Menu;

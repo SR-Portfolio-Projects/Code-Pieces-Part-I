@@ -1,16 +1,16 @@
 import React from 'react'
 import PieceDetails from './codePieces/PieceDetails';
-import PiecesHeader from './codePieces/PiecesHeader';
+
 
 
 
 const Pieces = ({ pieces, likePiece, deletePiece}) => {
-
+  console.log(pieces);
   return (
     <div className="Pieces">
-      <PiecesHeader />
       
-      {pieces.map((piece, index) => {
+      
+      {pieces && pieces.map((piece, index) => {
 
         return (
         
