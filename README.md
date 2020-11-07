@@ -1,10 +1,23 @@
 # Code-Pieces-Part-I
-**Small Application that simply allows you to add post, called code pieces, about coding. This application has the ability to preform basic CRUD oprations on the post.**
-### Concepts
-- React
+**This app uses a [API](https://github.com/2nd-Level/CODE-PIECES-API) that holds a list of code pieces and lets you add, edit, or remove code pieces from that list.**
+_______
+
+**This is a small react application that simply allows you to manage post, called code pieces, about coding. This application has the ability to preform basic CRUD oprations on the post.**
+### Inside The Code
 - React Router
+    - `withRouter()`
+    - `Route`
+    - `Switch`
 - React Router DOM
+     - `Link`
+     - `BrowserRouter`
 - Hooks / Custom Hooks
+
+### Files and Folders
+- assests
+- components
+- hooks
+- utils
 
 #### Pages
 - [x] View pieces page
@@ -13,6 +26,8 @@
     - Page that displays the pieces(component to be imported into the Pieces page)
 - [x] Piece page
     - Page that displays when a piece is clicked, information about one piece
+
+
 
 
 ### Pieces Logic
@@ -38,6 +53,11 @@
 - [UI]()
     - React Router
 
+### Users Authentication Functionality
+- [ ] Register
+- [x] Login
+    - default: username = user password = user
+- [x] Logout
 
 ### The Code Pieces
 - [x] User has the ability to add a code piece
