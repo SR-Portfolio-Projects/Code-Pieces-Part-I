@@ -3,8 +3,8 @@ import AddPieceHeader from "./AddPieceHeader";
 
 
 const AddPiece = ({addPiece}) => {
-  const [title, setTitle] = useState();
-	const [content, setContent] = useState();
+  const [title, setTitle] = useState('');
+	const [content, setContent] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
