@@ -9,6 +9,7 @@ _______
     - `Route`
     - `Switch`
     - `Redirect`: to redirect users back to home page when a private route is click and there is no token
+    - Private routes able to use the render and component props
 - React Router DOM
      - `Link`
      - `BrowserRouter`

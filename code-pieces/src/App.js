@@ -32,12 +32,12 @@ const App = () => {
 
 				<PrivateRoute exact path = '/userhome' component = { UserHome }/>
 
-				<PrivateRoute exact path = '/editpieceform' render = {() => {
+				{/* <PrivateRoute exact path = '/editpieceform' render = {() => {
 							return (
 								<EditPieceForm/>
 							)
 						}}
-				/>
+				/> */}
 
 				<PrivateRoute exact path = '/addpiece' render = {() => {
 							return (
@@ -59,7 +59,7 @@ const App = () => {
 							}}
 				/>
 
-				<Route  path = '/pieces' render = { () => {
+				<PrivateRoute  path = '/pieces' render = { () => {
 							return (
 										<Pieces pieces = { pieces } 
 												setPieces = { setPieces }
