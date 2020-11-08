@@ -37,16 +37,16 @@ ____
 - utils -->
 
 #### Pages
-- [x] Login/Register
+- [x] **Login/Register**
     - [x] styling
     - [x] Login component
     - [x] Register component
 
   -------------   
-- [x] UserHome
+- [x] **UserHome**
     - [ ] styling
   ------------- 
-- [x] Pieces page
+- [x] **Pieces** 
     - [x] styling
     - [x] Pieces Details Component
         - Page that displays piece details
@@ -56,16 +56,43 @@ ____
         - [ ] Piece Comments Component
   ------------- 
 
-- [x] Individual Piece Page
+- [x] **Individual Piece**
     - [x] Like Piece Component
     - [x] Delete Piece Component
     - [ ] Edit Piece Component
   ------------- 
-- [x] Add Piece Page
+- [x] **Add Piece**
     - [ ] styling
 ____
 
-
+### Logic
+- [ ] Authentication
+- [ ] User Home 
+- [ ] Pieces
+    -  The Pieces
+    - [ ] Piece
+        - Each Piece
+    - [ ] Add Piece
+        - Adding a piece
+        - [x] User has the ability to add a code piece
+    - [ ] Delete Piece
+         - Deleting a piece
+    - [x] Like Piece
+        - Use props to display the correct number of likes coming from data, when clicked the props will be increased by one and the like button color changes, the user should only be able to like the post once if the like button is clicked again it decrease the likes by one and the like button color changes back.
+    - [ ] Edit Piece
+        - Changing a piece
+    - [ ] Comments
+        -  The Comments
+    - [ ] Comment
+        - Each Comment
+    - [ ] Add Comment
+        - [ ] Adding a omment
+    - [ ] Delete Comment
+         - Deleting a comment
+    - [ ] Like Comment
+        - Liking a comment
+    - [ ] Edit Comment
+        - Changing acomment
 
 ### Pieces Logic
 - [x] View Pieces Logic
@@ -92,11 +119,7 @@ ____
 
 
 ### The Code Pieces
-- [x] User has the ability to add a code piece
-- [x] User has the ability to like a code piece 
-    - user is ony able to like it once
-    - if the like button is clicked a second time it removes the like
-    - when user has liked a piece the liked icons is a different color
+
 - [x] User has the ability to delete a piece
 - [ ] User has the ability to update a piece
 
