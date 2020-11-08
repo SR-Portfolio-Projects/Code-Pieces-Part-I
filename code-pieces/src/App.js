@@ -12,6 +12,7 @@ import Menu from './components/Menu';
 import Piece from './components/codePieces/Piece';
 import Landing from './components/loginandregister/components/Landing';
 import UserHome from './components/UserHomePage';
+import PrivateRoute from './components/PrivateRoute';
 
 const App = () => {
   const [ pieces,
@@ -27,46 +28,49 @@ const App = () => {
       <div className="App">
 		  <Menu />
 		  <Switch>
-			  <Route path = '/userhome' component = { UserHome }/>
-		  	<Route path = '/editpieceform' render = {() => {
-					return (
-						<EditPieceForm/>
-					)
-				}}
-			/>
+				<Route exact path ='/' component = { Landing } />
 
-			<Route path = '/addpiece' render = {() => {
-					return (
-						<AddPiece  addPiece = { handleCreate }/>
-					)
-				}}
-			/>
+				<PrivateRoute exact path = '/userhome' component = { UserHome }/>
 
-
-			<Route path = '/piece/:id' render = {(props) => {
-					return (
-								<Piece {...props} pieces = {pieces} 
-												  setPieces = { setPieces }
-												  getPieces = {getPieces} 
-												  deletePiece = { deletePiece }
-												  likePiece = { likePiece } 
-								/>
+				{/* <PrivateRoute exact path = '/editpieceform' render = {() => {
+							return (
+								<EditPieceForm/>
 							)
-					}}
-			/>
-			<Route path = '/pieces' render = { () => {
-					return (
-								<Pieces pieces = { pieces } 
-										setPieces = { setPieces }
-										likePiece = { likePiece } 
-										deletePiece = { deletePiece }
-										
-								/>
+						}}
+				/> */}
 
-						)
-					}} 
-			/>
-			<Route exact path ='/' component = { Landing } />
+				<PrivateRoute exact path = '/addpiece' render = {() => {
+							return (
+								<AddPiece  addPiece = { handleCreate }/>
+							)
+						}}
+				/>
+
+
+				<PrivateRoute exact path = '/piece/:id' render = {(props) => {
+							return (
+										<Piece {...props} pieces = {pieces} 
+														setPieces = { setPieces }
+														getPieces = {getPieces} 
+														deletePiece = { deletePiece }
+														likePiece = { likePiece } 
+										/>
+									)
+							}}
+				/>
+
+				<PrivateRoute  path = '/pieces' render = { () => {
+							return (
+										<Pieces pieces = { pieces } 
+												setPieces = { setPieces }
+												likePiece = { likePiece } 
+												deletePiece = { deletePiece }
+												
+										/>
+
+								)
+							}} 
+				/>
 
 		</Switch>
       </div>

@@ -8,7 +8,7 @@ function Menu() {
     const userToken =  localStorage.getItem('token')
      return (
          <>
-          {(!userToken) ? null:
+          
         <div className = 'menu'>
             <nav>
                 <Link className = 'menu-link' to = '/userhome'>
@@ -21,12 +21,14 @@ function Menu() {
                 <Link className = 'menu-link' to = '/pieces'>
                     Pieces Feed
                 </Link>
+                {(!userToken) ? null:
                     <Logout /> 
+                }
             </nav>
             
         </div>
         
-    }
+    
 
     <Header />
         </>

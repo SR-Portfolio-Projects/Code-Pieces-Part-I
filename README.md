@@ -8,19 +8,24 @@ _______
     - `withRouter()`
     - `Route`
     - `Switch`
+    - `Redirect`: to redirect users back to home page when a private route is click and there is no token
+    - Private routes able to use the render and component props
 - React Router DOM
      - `Link`
      - `BrowserRouter`
 - Hooks / Custom Hooks
+- Axios
+- Node Sass
+- FontAwesome
 
-### Files and Folders
+<!-- ### Files and Folders
 - assests
 - components
 - hooks
-- utils
+- utils -->
 
 #### Pages
-- [x] View pieces page
+- [x] Pieces page
      - All pieces
 - [x] Pieces details page
     - Page that displays the pieces(component to be imported into the Pieces page)
