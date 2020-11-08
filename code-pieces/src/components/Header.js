@@ -7,12 +7,13 @@ function Header() {
      return (
         <div className = 'header'>
             <h1>Code Pieces</h1>
+            {/* <h3>A place to meet new developers while sharing and learning tips and tricks.</h3> */}
 
             <div className = 'sub-info'>
                 <div className = 'sub'>
                     <FontAwesomeIcon icon={ faCode } className = 'sub-icon' />
                     <p>
-                        Code pieces is a place to meet new developers while sharing and learning tips and tricks. Talk about meaningful experiences, share jokes, ask questions if coding is invloved it belongs here.
+                         Talk about meaningful experiences, share jokes, ask questions if coding is invloved it belongs here.
                     </p>
 
                 </div>
@@ -20,7 +21,7 @@ function Header() {
                 <div className = 'sub'>
                     <FontAwesomeIcon icon={ faUserSecret } className = 'sub-icon' />
                     <p>
-                        Discoverd some secerts, had a meaningful ahhaa moment. Share your thoughts and feelings and help other developers.
+                        Want to discoverd some secerts? Had a meaningful ahhaa moment? Share your thoughts and feelings and help other developers.
                     </p>
                     
                 </div>
