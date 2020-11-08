@@ -1,5 +1,11 @@
 # Code-Pieces-Part-I
-**This app uses a [API](https://github.com/2nd-Level/CODE-PIECES-API) that holds a list of code pieces and lets you add, edit, or remove code pieces from that list.**
+**This app uses a Nodejs [API](https://github.com/2nd-Level/CODE-PIECES-API) with authentication built in**
+**Code Pieces App: https://code-pieces.vercel.app/**
+##### Login Credentials
+```
+username = user
+password = user
+```
 _______
 
 **This is a small react application that simply allows you to manage post, called code pieces, about coding. This application has the ability to preform basic CRUD oprations on the post.**
