@@ -67,26 +67,29 @@ ____
 
 ### Logic
 - [ ] Authentication
+    - [ ] **Register:**
+    - [x] **Login:** User must be login to see anything other than the login/register page. Use axios to make a API call to login and use the token coming from the API to authenticate users. Route to user home page on login.
+    - [x] **Logout:** When the logout button is clicked remove the token.
 - [ ] User Home 
-- [ ] Pieces
-    -  The Pieces
-    - [ ] Piece
-        - Each Piece
-    - [ ] Add Piece
-        - Adding a piece
-        - [x] User has the ability to add a code piece
-    - [ ] Delete Piece
-         - Deleting a piece
+    - Display infomation relevant to the user
+- [x] Pieces
+    -  Display all the pieces, by making an API call to get the pieces and displaying the information for each piece on the screen
+    - [x] Piece
+        - Display information about a individual piece, by using dynamic routing, getting access to the url parameters and using it to filter through the pieces and returning the piece that matches
+    - [x] Add Piece
+        - Clicking the add piece button will take you to a form that will allow you to enter a title and content for a new piece
+    - [x] Delete Piece
+         - Click the delete button and that piece will be deleted, by using the filter method to return all tthe pieces except the current piece.
     - [x] Like Piece
         - Use props to display the correct number of likes coming from data, when clicked the props will be increased by one and the like button color changes, the user should only be able to like the post once if the like button is clicked again it decrease the likes by one and the like button color changes back.
     - [ ] Edit Piece
         - Changing a piece
     - [ ] Comments
-        -  The Comments
+        -  When the comment section is clicked the comments show
     - [ ] Comment
         - Each Comment
     - [ ] Add Comment
-        - [ ] Adding a omment
+        - Adding a omment
     - [ ] Delete Comment
          - Deleting a comment
     - [ ] Like Comment
@@ -94,17 +97,7 @@ ____
     - [ ] Edit Comment
         - Changing acomment
 
-### Pieces Logic
-- [x] View Pieces Logic
-- [x] Create Piece Logic
-- [x] Delete Piece Logic
-- [ ] Edit Piece Logic
 
-### Comments Logic
-- [x] View Comments Logic
-- [ ] Create Comments Logic
-- [ ] Delete Comments Logic
-- [ ] Edit Comments Logic
 
 
 
