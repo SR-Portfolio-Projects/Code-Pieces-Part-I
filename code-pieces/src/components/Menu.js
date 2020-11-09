@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from './codePieces/Header';
+import Header from './Header';
 import Logout from './loginandregister/components/Logout';
 
 function Menu() {
@@ -27,9 +27,6 @@ function Menu() {
             </nav>
             
         </div>
-        
-    
-
     <Header />
         </>
      )
