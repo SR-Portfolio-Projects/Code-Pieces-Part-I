@@ -37,16 +37,16 @@ ____
 - utils -->
 
 #### Pages
-- [x] Login/Register
+- [x] **Login/Register**
     - [x] styling
     - [x] Login component
     - [x] Register component
 
   -------------   
-- [x] UserHome
+- [x] **UserHome**
     - [ ] styling
   ------------- 
-- [x] Pieces page
+- [x] **Pieces** 
     - [x] styling
     - [x] Pieces Details Component
         - Page that displays piece details
@@ -56,28 +56,48 @@ ____
         - [ ] Piece Comments Component
   ------------- 
 
-- [x] Individual Piece Page
+- [x] **Individual Piece**
     - [x] Like Piece Component
     - [x] Delete Piece Component
     - [ ] Edit Piece Component
   ------------- 
-- [x] Add Piece Page
+- [x] **Add Piece**
     - [ ] styling
 ____
 
+### Logic
+- [ ] Authentication
+    - [ ] **Register:**
+    - [x] **Login:** User must be login to see anything other than the login/register page. Use axios to make a API call to login and use the token coming from the API to authenticate users. Route to user home page on login.
+    - [x] **Logout:** When the logout button is clicked remove the token.
+- [ ] User Home 
+    - Display infomation relevant to the user
+- [x] Pieces
+    -  Display all the pieces, by making an API call to get the pieces and displaying the information for each piece on the screen
+    - [x] Piece
+        - Display information about a individual piece, by using dynamic routing, getting access to the url parameters and using it to filter through the pieces and returning the piece that matches
+    - [x] Add Piece
+        - Clicking the add piece button will take you to a form that will allow you to enter a title and content for a new piece
+    - [x] Delete Piece
+         - Click the delete button and that piece will be deleted, by using the filter method to return all tthe pieces except the current piece.
+    - [x] Like Piece
+        - Use props to display the correct number of likes coming from data, when clicked the props will be increased by one and the like button color changes, the user should only be able to like the post once if the like button is clicked again it decrease the likes by one and the like button color changes back.
+    - [ ] Edit Piece
+        - Changing a piece
+    - [ ] Comments
+        -  When the comment section is clicked the comments show
+    - [ ] Comment
+        - Each Comment
+    - [ ] Add Comment
+        - Adding a omment
+    - [ ] Delete Comment
+         - Deleting a comment
+    - [ ] Like Comment
+        - Liking a comment
+    - [ ] Edit Comment
+        - Changing acomment
 
 
-### Pieces Logic
-- [x] View Pieces Logic
-- [x] Create Piece Logic
-- [x] Delete Piece Logic
-- [ ] Edit Piece Logic
-
-### Comments Logic
-- [x] View Comments Logic
-- [ ] Create Comments Logic
-- [ ] Delete Comments Logic
-- [ ] Edit Comments Logic
 
 
 
@@ -92,11 +112,7 @@ ____
 
 
 ### The Code Pieces
-- [x] User has the ability to add a code piece
-- [x] User has the ability to like a code piece 
-    - user is ony able to like it once
-    - if the like button is clicked a second time it removes the like
-    - when user has liked a piece the liked icons is a different color
+
 - [x] User has the ability to delete a piece
 - [ ] User has the ability to update a piece
 
